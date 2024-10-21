@@ -214,31 +214,30 @@ class TelaInicial extends StatelessWidget {
             ),
             Expanded(
               child: ListView.separated(
-                itemBuilder: (BuildContext context, int conversa) {
+                itemBuilder: (BuildContext context, int index) {
                   return Consumer<Visualizadas>(
-                    builder: (context, visualizadasProvider, child) {
-                      final conversaItem = tabela[conversa];
-                      final isSelected =
-                          visualizadasProvider.selectedIndex == conversa;
+                    builder: (context, conversationProvider, child) {
+                      var conversation =
+                          conversationProvider.conversationList[index];
                       return ListTile(
                         leading: ClipRRect(
                           borderRadius: BorderRadius.circular(50.0),
                           child: Image.asset(
-                            tabela[conversa].icone,
+                            conversation.icone,
                             width: 60.0,
                             height: 60.0,
                             fit: BoxFit.cover,
                           ),
                         ),
                         title: Text(
-                          tabela[conversa].titulo,
+                          conversation.titulo,
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
                           ),
                         ),
                         subtitle: Text(
-                          tabela[conversa].subtitulo,
+                          conversation.subtitulo,
                           style: TextStyle(
                             fontSize: 12,
                             color: Colors.grey,
@@ -248,27 +247,19 @@ class TelaInicial extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Text(
-                              tabela[conversa].tempo,
+                              conversation.tempo,
                               style: TextStyle(
                                 fontSize: 12,
                                 color: Colors.grey,
                               ),
                             ),
-                            Consumer<Visualizadas>(
-                              builder: (context, value, child) {
-                                return Text(
-                                  value.num.toString(),
-                                  style: TextStyle(color: Colors.amber),
-                                );
-                              },
-                            ),
+                            if (!conversation.lida)
+                              Icon(Icons.circle, color: Colors.green)
                           ],
                         ),
-                        selected: isSelected,
                         selectedTileColor: Colors.amber,
-                        onLongPress: () {
-                          Provider.of<Visualizadas>(context, listen: false)
-                              .selecionarConversa(conversa);
+                        onTap: () {
+                          conversationProvider.alterReadState(index);
                         },
                       );
                     },

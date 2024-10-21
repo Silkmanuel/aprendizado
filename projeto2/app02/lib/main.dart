@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Tela do Whatsapp',
       home: ChangeNotifierProvider(
         create: (_) => Visualizadas(),
-        child: TelaInicial(),
+        child: const TelaInicial(),
       ),
     );
   }

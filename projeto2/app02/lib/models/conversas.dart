@@ -9,6 +9,7 @@ class ConversarRepositorio {
       subtitulo: 'Ramada sebastião: Sticker',
       tempo: '15:34',
       descricao: '15:34',
+      lida: false,
     ),
     Conversa(
       icone: 'images/Picture.png',
@@ -16,6 +17,7 @@ class ConversarRepositorio {
       subtitulo: 'Eu: Captura de ecrã 2024-08-27,às 17.48.30.pnh',
       tempo: 'Ontem',
       descricao: '15:34',
+      lida: false,
     ),
     Conversa(
       icone: 'images/Picture.png',
@@ -23,6 +25,7 @@ class ConversarRepositorio {
       subtitulo: 'Testa com o WhatsApp',
       tempo: '19:16',
       descricao: '15:34',
+      lida: false,
     ),
     Conversa(
       icone: 'images/Picture.png',
@@ -30,6 +33,7 @@ class ConversarRepositorio {
       subtitulo: 'Eu: Captura de ecrã 2024-08-27,às 17.48.30.pnh',
       tempo: 'Ontem',
       descricao: '15:34',
+      lida: false,
     ),
     Conversa(
       icone: 'images/Picture.png',
@@ -37,6 +41,7 @@ class ConversarRepositorio {
       subtitulo: 'Testa com o WhatsApp',
       tempo: '19:16',
       descricao: '15:34',
+      lida: false,
     ),
     Conversa(
       icone: 'images/Picture.png',
@@ -44,6 +49,7 @@ class ConversarRepositorio {
       subtitulo: '~Enf. Domingos António|US',
       tempo: '19:15',
       descricao: '15:34',
+      lida: false,
     ),
     Conversa(
       icone: 'images/Picture.png',
@@ -51,6 +57,7 @@ class ConversarRepositorio {
       subtitulo: '0:18',
       tempo: '19:15',
       descricao: '15:34',
+      lida: false,
     ),
     Conversa(
       icone: 'images/Picture.png',
@@ -58,6 +65,7 @@ class ConversarRepositorio {
       subtitulo: '~Carlos Trader: cansei',
       tempo: '19:04',
       descricao: '15:34',
+      lida: false,
     ),
     Conversa(
       icone: 'images/Picture.png',
@@ -65,6 +73,7 @@ class ConversarRepositorio {
       subtitulo: 'ME PASSA LINK TROPA',
       tempo: '19:01',
       descricao: '15:34',
+      lida: false,
     ),
   ];
 }

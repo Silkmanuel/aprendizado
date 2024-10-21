@@ -4,6 +4,7 @@ class Conversa {
   String subtitulo;
   String tempo;
   String descricao;
+  bool lida;
 
   Conversa({
     required this.icone,
@@ -11,5 +12,6 @@ class Conversa {
     required this.subtitulo,
     required this.tempo,
     required this.descricao,
+    required this.lida,
   });
 }
